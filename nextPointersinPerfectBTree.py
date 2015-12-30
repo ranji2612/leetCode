@@ -1,4 +1,4 @@
-# Populating Next Right Pointers in each Node
+# Populating Next Right Pointers in each Node in PERFECT Binary tree
 # https://leetcode.com/problems/populating-next-right-pointers-in-each-node/
 
 # Definition for binary tree with next pointer.
