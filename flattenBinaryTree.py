@@ -10,22 +10,17 @@
 #         self.right = None
 
 class Solution(object):
+    prev = None
     def flatten(self, root):
         """
         :type root: TreeNode
         :rtype: void Do not return anything, modify root in-place instead.
         """
-        def preOrder(a):
-            if a==None:
-                return []
-            return [a.val] + preOrder(a.left) + preOrder(a.right)
-        arr = preOrder(root)
-        l = len(arr)
-        if l > 1:
-            root.val = arr[0]
-            root.left = None
-            root.right = None
-            prev = root
-            for i in range(1,l):
-                prev.right = TreeNode(arr[i])
-                prev = prev.right
+        if root==None:
+            return None
+        self.flatten(root.right)
+        self.flatten(root.left)
+        root.right = self.prev
+        root.left = None
+        self.prev = root
+        return
