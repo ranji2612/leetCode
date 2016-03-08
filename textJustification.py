@@ -1,4 +1,4 @@
-# Text Justification 
+# Text Justification
 # https://leetcode.com/problems/text-justification/
 
 class Solution(object):
